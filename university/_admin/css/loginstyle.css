@@ -1,0 +1,94 @@
+body
+{
+    background-color:#66ccff;
+    margin:0px;
+	padding:0px;
+
+}
+
+#star
+{
+    color: red;
+    font-size: 20px;
+}
+
+#logform
+{
+    background-color:darkblue;
+    height: 350px;
+    width: 350px;
+    text-align:center;
+    padding-top: 30px;
+    margin-left: 500px;
+    margin-top: 50px;
+}
+
+
+
+#login_user
+{
+    height: 30px;
+    width: 250px;
+    font-size: 18px;
+	font-family:"Times New Roman", Times, serif;
+    padding-left: 10px;
+    color: black;
+}
+#login_pass
+{
+    height: 30px;
+    width: 250px;
+    font-size: 18px;
+	font-family:"Times New Roman", Times, serif;
+    padding-left: 10px;
+    color: black;
+}
+#loginbtn
+{
+    height: 30px;
+    width: 110px;
+    font-size: 12px;
+    padding-left: 10px;
+    color: white;
+    background-color:green;
+}
+#span1
+{
+    color:white;
+    font-size:36px;
+}
+#check
+{
+    height: 15px;
+    width: 15px;
+}
+
+#span2
+{
+    color: white;
+    font-size: 18px;
+}
+#span3
+{
+    color: white;
+    font-size: 18px;
+    padding-left: 150px;
+}
+
+#for
+{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+ .select
+{
+border:1px solid black;
+background-color:#FFFFFF;
+font-family:"Times New Roman", Times, serif;
+font-size: 18px;
+height:30px;
+width:250px;
+padding-left:10px;
+}
