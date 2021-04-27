@@ -3,9 +3,6 @@ session_start();
 include("../includes/db_connect.php");
 include("../includes/functions.php");
 
-$con=mysqli_connect("localhost","root","");
-$db=mysqli_select_db($con,"university");
-
 if($_REQUEST['act'])
 {
 $_REQUEST['act']();
@@ -19,8 +16,8 @@ $_REQUEST['act']();
 	$R=$_REQUEST;
 	$sql="select *from student where  st_email='$R[st_email]' and st_name='$R[st_name]'";
 	$rs=mysqli_query($con,$sql);
-	
 	$data=mysqli_fetch_assoc($rs);
+	
 	if(mysqli_num_rows($rs))
 	{
 	$_SESSION['student_user']=$data['st_id'];

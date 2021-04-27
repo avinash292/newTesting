@@ -3,7 +3,7 @@ include("includes/functions.php");
 include("lib/faculity_ajax.php");
 include("includes/db_connect.php");
 ?>
-<?php echo $_SESSION[user_name];?>
+<?php echo $_SESSION['user_name'];?>
 <script src="js/faculty.js"></script>
 <script src="js/ajax.js"></script>
 <link rel="stylesheet" href="css/bodystyle.css" />

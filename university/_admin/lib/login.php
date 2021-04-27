@@ -2,31 +2,34 @@
 session_start();
 include("../includes/db_connect.php");
 include("../includes/functions.php");
-if($_REQUEST[act])
-{$_REQUEST[act]();}
+$con=mysqli_connect("localhost","root","") or die(mysql_error());
+$db=mysqli_select_db($con,"university");
 
-$check_type=$_REQUEST[login_type];
+if($_REQUEST['act'])
+{$_REQUEST['act']();}
+
+$check_type=$_REQUEST['login_type'];
 
 	function check_user()
 	{
 	$R=$_REQUEST;
-	$user=md5($R[login_user]);
-	$pass=md5($R[login_pass]);
-	if($_REQUEST[login_type]==1)
+	$user=md5($R['login_user']);
+	$pass=md5($R['login_pass']);
+	if($_REQUEST['login_type']==1)
 	{
 	$sql="select *from login where login_user='$user' and login_pass='$pass' ";
 	
-	$rs=mysql_query($sql) or die(mysql_error());
+	$rs=mysqli_query($con,$sql) or die(mysql_error());
 	if(mysql_num_rows($rs))
 	{
-	$_SESSION[login_user]=$R[login_user];
+	$_SESSION['login_user']=$R['login_user'];
 	header("location:../student_view.php?msg=You Are Login Successfully");
 	}
 	else
 	header("location:../index.php?msg=Plz try Again......??");
 	}
 	
-	if($_REQUEST[login_type]==2)
+	if($_REQUEST['login_type']==2)
 	{
 	$sql="select *from faculty where  faculty_user='$R[login_user]' and faculty_pass='$R[login_pass]'";
 	$rs=mysql_query($sql) or die(mysql_error());

@@ -1,4 +1,4 @@
 <?php
-$con=mysql_connect("localhost","root","vertrigo") or die(mysql_error());
-$db=mysql_select_db("university2");
+$con=mysqli_connect("localhost","root","") or die(mysql_error());
+$db=mysqli_select_db($con,"university");
 ?>
